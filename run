@@ -1,0 +1,21 @@
+echo "Preparing logfiles..."
+touch clientlog.txt serverlog.txt
+
+echo "Start Sensor Reading Terminal..."
+gnome-terminal --command "cat /dev/ttyUSB0 >> serverlog.txt"
+
+echo "Start Server Terminal..."
+gnome-terminal --command "./server"
+
+echo "Start Client Terminal..."
+gnome-terminal --command "./client"
+
+echo "System Running (ctrl+c to stop)..."
+
+echo "Capturing data..."
+cat /dev/ttyUSB0 >> serverlog.txt
+
+
+
+
+

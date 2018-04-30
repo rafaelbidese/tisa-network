@@ -1,0 +1,6 @@
+
+echo "Compiling client... "
+gcc -pthread -o client client.c
+
+echo "Compiling server... "
+gcc -pthread -o server server.c
